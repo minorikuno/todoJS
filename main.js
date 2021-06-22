@@ -68,7 +68,7 @@ function addToDo(toDo, id, done, trash) {
 // addToDo('drink')
 
 // event
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keyup', function (e) {
   if (event.keyCode == 13) {
     const toDo = input.value;
     if (toDo) {
@@ -87,6 +87,23 @@ document.addEventListener('keyup', function (event) {
     input.value = "";
   }
 });
+document.getElementById('enter').addEventListener('click', function (e) {
+    const toDo = input.value;
+    if (toDo) {
+      addToDo(toDo, id, false, false);
+      LIST.push(
+        {
+          name: toDo,
+          id: id,
+          done: false,
+          trash: false
+        });
+      // Save to local storage (must be written when added)
+      localStorage.setItem("TODO", JSON.stringify(LIST));
+      id++;
+    }
+    input.value = "";
+  });
 
 
 // uncheck -> checked (element = check icon)
