@@ -5,6 +5,7 @@
 }
 body {
   background-color: #F2CEE6;
+  font-family: 'Courier New', Courier, monospace;
 }
 i {
   text-shadow: 2px 2px 8px darkblue;
@@ -33,7 +34,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px 20px 0 0;
-  height: 150px;
+  height: 250px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -43,7 +44,7 @@ header {
 .clear {
   display: flex;
   justify-content: flex-end;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -93,8 +94,36 @@ header {
 ::placeholder {
   color: #fff;
   font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .lineThrough {
   text-decoration: line-through;
+}
+
+/* -------  weather -------- */
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px darkblue;
+  text-align: center;
+}
+.temperature-value {
+  font-size: 30px;
+}
+.weather i {
+  font-size:  3rem;
+  margin-bottom: 10px;
+}
+
+.notification {
+  background-color: blueviolet;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px #ccadc2;
+}
+
+.weather-icon img {
+  width: 50px;
 }
